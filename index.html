@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/vue-material.css">
+</head>
+<body>
+  <!-- Contenedor Vue -->
+  <div id="app">
+    <!--Sidenav-->
+    <div class="phone-viewport">
+      <md-toolbar>
+        <md-button class="md-icon-button" @click="toggleLeftSidenav">
+          <md-icon>menu</md-icon>
+        </md-button>
+
+        <h2 class="md-title">My App</h2>
+      </md-toolbar>
+
+      <div>
+        <md-button class="md-raised md-accent" @click="toggleRightSidenav">Toggle right</md-button>
+        <p>Open console to see the events</p>
+      </div>
+
+      <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
+        <md-toolbar class="md-large">
+          <div class="md-toolbar-container">
+            <h3 class="md-title">Sidenav content</h3>
+          </div>
+        </md-toolbar>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
+      </md-sidenav>
+
+      <md-sidenav class="md-right" ref="rightSidenav" @open="open('Right')" @close="close('Right')">
+        <md-toolbar>
+          <div class="md-toolbar-container">
+            <h3 class="md-title">Sidenav content</h3>
+          </div>
+        </md-toolbar>
+
+      </md-sidenav>
+    </div>
+
+    <!-- Texto  -->
+    <span class="md-display-4">Display 4</span><br>
+    <span class="md-display-3">Display 3</span><br>
+    <span class="md-display-2">Display 2</span><br>
+    <span class="md-display-1">Display 1</span><br>
+    <span class="md-headline">Headline</span><br>
+    <span class="md-title">Title</span><br>
+    <span class="md-subheading">Subheading</span><br>
+    <span class="md-body-2">Body 2</span><br>
+    <span class="md-body-1">Body 1</span><br>
+    <span class="md-caption">Caption</span><br>
+    <a href="#/typography">Link</a><br>
+    <!-- Boton -->
+     <md-button class="md-fab">
+        <md-icon>edit</md-icon>
+      </md-button>
+    <!-- Modal -->
+      <md-dialog md-open-from="#custom" md-close-to="#custom" ref="dialog1">
+        <md-dialog-title>Lorem ipsum dolor sit amet</md-dialog-title>
+
+        <md-dialog-content>Nemo, nobis necessitatibus ut illo, ducimus ex.</md-dialog-content>
+
+        <md-dialog-actions>
+          <md-button class="md-primary" @click="closeDialog('dialog1')">Cancel</md-button>
+          <md-button class="md-primary" @click="closeDialog('dialog1')">Ok</md-button>
+        </md-dialog-actions>
+      </md-dialog>
+
+      <md-dialog md-open-from="#fab" md-close-to="#fab" ref="dialog2">
+        <md-dialog-title>Create new note</md-dialog-title>
+
+        <md-dialog-content>
+          <form>
+            <md-input-container>
+              <label>Note</label>
+              <md-textarea></md-textarea>
+            </md-input-container>
+          </form>
+        </md-dialog-content>
+
+        <md-dialog-actions>
+          <md-button class="md-primary" @click="closeDialog('dialog2')">Cancel</md-button>
+          <md-button class="md-primary" @click="closeDialog('dialog2')">Create</md-button>
+        </md-dialog-actions>
+      </md-dialog>
+
+      <br>
+
+      <md-button class="md-primary md-raised" id="custom" @click="openDialog('dialog1')">Custom</md-button>
+      <md-button class="md-fab md-fab-bottom-right" id="fab" @click="openDialog('dialog2')">
+        <md-icon>add</md-icon>
+      </md-button>
+
+      <br>
+
+      <!-- Spinner -->
+      <md-spinner md-indeterminate></md-spinner>
+      <md-spinner md-indeterminate class="md-accent"></md-spinner>
+      <md-spinner md-indeterminate class="md-warn"></md-spinner>
+
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="js/vue-material.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
