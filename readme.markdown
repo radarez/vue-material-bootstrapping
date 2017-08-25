@@ -6,6 +6,8 @@ Saludos banda hoy les dejo un ejemplo sobre la integración de un framework lige
 
 En el ejemplo que les traigo estoy agregando a Vue.JS como una instancia global, en posteriores apartados les mostrare como pueden compilar Vue.JS para desarrollar aplicaciones PWA (Progressive Web Apps) las cuales se están poniendo de moda en estos últimos tiempos.
 
+[Leer más...](http://www.radarez.com.mx/RadarezWeb/blog/vue/Apps-Vue-Material "Interfaces Reactivas con VUE.JS")
+
 ##### Adrian Miranda A.
 ##### Twiitter: [@heyAparicio](https://twitter.com/heyaparicio?lang=es "@heyAparicio")
 ##### E-mail: ama@radarez.com
